@@ -1,23 +1,44 @@
 {
-  "name": "Meine App",
-  "short_name": "App",
+  "id": "meine-todo-app",
+  "name": "Meine Aufgaben-App",
+  "short_name": "Aufgaben",
   "description": "Eine einfache Todo-App",
-  "start_url": "index.html",
+  "start_url": "/meine-app/",
   "display": "standalone",
   "background_color": "#f5f5f5",
   "theme_color": "#4285f4",
+  "orientation": "any",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
     }
   ]
-} 
+}
