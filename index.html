@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <title>Meine App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Meine App</h1>
+        </header>
+        
+        <main>
+            <div class="todo-container">
+                <h2>Aufgabenliste</h2>
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Neue Aufgabe...">
+                    <button id="addTaskBtn">Hinzufügen</button>
+                </div>
+                <ul id="taskList" class="task-list">
+                    <!-- Aufgaben werden hier eingefügt -->
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Meine PWA Demo-App</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Service Worker registrieren
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registriert:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker Registrierung fehlgeschlagen:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html> 
